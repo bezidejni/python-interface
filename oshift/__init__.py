@@ -165,7 +165,7 @@ class RestApi(object):
         method_call = getattr(requests, method)
         self.response = method_call(
             url=self.url, auth=auth, params=params,
-            timeout=130, verify=False)
+            timeout=500, verify=False)
         try:
             raw_response = self.response.raw
         except Exception as e:
